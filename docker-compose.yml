@@ -1,5 +1,8 @@
-version: '3.5'
-services:
-  broadlinkac2mqtt:
-    build: .
-    restart: on-failure
+    version: '3.5'
+    services:
+      broadlinkac2mqtt:
+        image: "ghcr.io/g4ssam/broadlinkac2mqtt_for_docker/tree/Test_Simon_branch"
+        container_name: "broadlinkac2mqtt_Simon"
+        restart: "on-failure"
+        volumes:
+            - /var/lib/docker/volumes/broadlink_config/_data:/config

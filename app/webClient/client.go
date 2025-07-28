@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ArtemVladimirov/broadlinkac2mqtt/app"
-	"github.com/ArtemVladimirov/broadlinkac2mqtt/app/webClient/models"
+	"github.com/g4ssam/broadlinkac2mqtt_for_docker/app"
+	"github.com/g4ssam/broadlinkac2mqtt_for_docker/app/webClient/models"
 )
 
 type webClient struct {

@@ -9,7 +9,7 @@ RUN adduser \
   --uid 65532 \
   small-user
 
-WORKDIR $GOPATH/src/broadlinkac/app/
+WORKDIR $GOPATH/src/broadlinkac2mqtt_for_docker/app/
 
 COPY . .
 

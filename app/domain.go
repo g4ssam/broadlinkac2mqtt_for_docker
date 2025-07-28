@@ -3,10 +3,10 @@ package app
 import (
 	"context"
 
-	modelsMqtt "github.com/ArtemVladimirov/broadlinkac2mqtt/app/mqtt/models"
-	modelsCache "github.com/ArtemVladimirov/broadlinkac2mqtt/app/repository/models"
-	modelsService "github.com/ArtemVladimirov/broadlinkac2mqtt/app/service/models"
-	modelsWeb "github.com/ArtemVladimirov/broadlinkac2mqtt/app/webClient/models"
+	modelsMqtt "github.com/g4ssam/broadlinkac2mqtt_for_docker/app/mqtt/models"
+	modelsCache "github.com/g4ssam/broadlinkac2mqtt_for_docker/app/repository/models"
+	modelsService "github.com/g4ssam/broadlinkac2mqtt_for_docker/app/service/models"
+	modelsWeb "github.com/g4ssam/broadlinkac2mqtt_for_docker/app/webClient/models"
 	mqtt "github.com/eclipse/paho.mqtt.golang"
 )
 

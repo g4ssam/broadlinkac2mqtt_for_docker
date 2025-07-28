@@ -1,4 +1,4 @@
-module github.com/ArtemVladimirov/broadlinkac2mqtt
+module github.com/g4ssam/broadlinkac2mqtt_for_docker
 
 go 1.22
 

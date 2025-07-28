@@ -8,13 +8,13 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ArtemVladimirov/broadlinkac2mqtt/app"
-	modelsMqtt "github.com/ArtemVladimirov/broadlinkac2mqtt/app/mqtt/models"
-	modelsRepo "github.com/ArtemVladimirov/broadlinkac2mqtt/app/repository/models"
-	"github.com/ArtemVladimirov/broadlinkac2mqtt/app/service/models"
-	modelsWeb "github.com/ArtemVladimirov/broadlinkac2mqtt/app/webClient/models"
-	"github.com/ArtemVladimirov/broadlinkac2mqtt/pkg/coder"
-	"github.com/ArtemVladimirov/broadlinkac2mqtt/pkg/converter"
+	"github.com/REMOVED_USER/broadlinkac2mqtt_for_docker/app"
+	modelsMqtt "github.com/REMOVED_USER/broadlinkac2mqtt_for_docker/app/mqtt/models"
+	modelsRepo "github.com/REMOVED_USER/broadlinkac2mqtt_for_docker/app/repository/models"
+	"github.com/REMOVED_USER/broadlinkac2mqtt_for_docker/app/service/models"
+	modelsWeb "github.com/REMOVED_USER/broadlinkac2mqtt_for_docker/app/webClient/models"
+	"github.com/REMOVED_USER/broadlinkac2mqtt_for_docker/pkg/coder"
+	"github.com/REMOVED_USER/broadlinkac2mqtt_for_docker/pkg/converter"
 	"golang.org/x/sync/errgroup"
 )
 

@@ -6,9 +6,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ArtemVladimirov/broadlinkac2mqtt/app"
-	"github.com/ArtemVladimirov/broadlinkac2mqtt/app/mqtt/models"
-	modelsservice "github.com/ArtemVladimirov/broadlinkac2mqtt/app/service/models"
+	"github.com/REMOVED_USER/broadlinkac2mqtt_for_docker/app"
+	"github.com/REMOVED_USER/broadlinkac2mqtt_for_docker/app/mqtt/models"
+	modelsservice "github.com/REMOVED_USER/broadlinkac2mqtt_for_docker/app/service/models"
 	mqtt "github.com/eclipse/paho.mqtt.golang"
 )
 

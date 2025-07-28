@@ -9,7 +9,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/ArtemVladimirov/broadlinkac2mqtt/config"
+	"github.com/REMOVED_USER/broadlinkac2mqtt_for_docker/config"
 	paho "github.com/eclipse/paho.mqtt.golang"
 )
 

@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"log/slog"
 
-	"github.com/ArtemVladimirov/broadlinkac2mqtt/app"
+	"github.com/g4ssam/broadlinkac2mqtt_for_docker/app"
 
-	"github.com/ArtemVladimirov/broadlinkac2mqtt/app/mqtt/models"
+	"github.com/g4ssam/broadlinkac2mqtt_for_docker/app/mqtt/models"
 	paho "github.com/eclipse/paho.mqtt.golang"
 )
 

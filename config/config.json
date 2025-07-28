@@ -4,9 +4,9 @@
     "log_level": "error"
   },
   "mqtt": {
-    "broker": "mqtt://192.168.1.10:1883",
-    "user": "admin",
-    "password": "password",
+    "broker": "mqtt://192.168.1.107:1883",
+    "user": "g4ssam",
+    "password": "Lozovaya95",
     "client_id": "aircac2",
     "topic_prefix": "aircon2",
     "auto_discovery_topic": "homeassistant",
@@ -14,9 +14,9 @@
   },
   "devices": [
     {
-      "ip": "192.168.1.12",
+      "ip": "192.168.1.63",
       "mac": "34ea345b0fd4",
-      "name": "MH Childroom AC",
+      "name": "AC in Kitchen",
       "port": 80,
       "temperature_unit": "C"
     }

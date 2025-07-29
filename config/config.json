@@ -16,7 +16,7 @@
     {
       "ip": "192.168.1.63",
       "mac": "34ea34a6724e",
-      "name": "AC in Kitchen",
+      "name": "Кондиционер на кухне",
       "port": 80,
       "temperature_unit": "C",
       "temp_step": 1.0

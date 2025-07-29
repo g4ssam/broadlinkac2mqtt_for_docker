@@ -1,4 +1,3 @@
-    version: '3.5'
     services:
       broadlinkac2mqtt:
         image: "g4ssam/broadlinkac2mqtt_for_docker"

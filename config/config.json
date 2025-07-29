@@ -1,0 +1,25 @@
+{
+  "service": {
+    "update_interval": 10,
+    "log_level": "error"
+  },
+  "mqtt": {
+    "broker": "tcp://192.168.1.107:1883",
+    "user": "g4ssam",
+    "password": "Lozovaya95",
+    "client_id": "aircac2",
+    "topic_prefix": "aircon2",
+    "auto_discovery_topic": "homeassistant",
+    "auto_discovery_topic_retain": false
+  },
+  "devices": [
+    {
+      "ip": "192.168.1.63",
+      "mac": "34ea34a6724e",
+      "name": "AC in Kitchen",
+      "port": 80,
+      "temperature_unit": "C",
+      "precision": 1.0
+    }
+  ]
+}

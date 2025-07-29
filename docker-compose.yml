@@ -1,7 +1,7 @@
     version: '3.5'
     services:
       broadlinkac2mqtt:
-        image: "github.com/REMOVED_USER/broadlinkac2mqtt_for_docker.git"
+        image: "REMOVED_USER/broadlinkac2mqtt_for_docker"
         container_name: "broadlinkac2mqtt_Simon"
         restart: "on-failure"
         volumes:

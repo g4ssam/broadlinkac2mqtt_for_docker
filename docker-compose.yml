@@ -4,4 +4,4 @@
         container_name: "broadlinkac2mqtt_Simon"
         restart: "on-failure"
         volumes:
-            - /var/lib/docker/volumes/broadlink_config/_data:/config
+            - /var/lib/docker/volumes/broadlink_config/_data/config:/app/config

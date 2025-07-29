@@ -1,4 +1,3 @@
-    version: '3.5'
     services:
       broadlinkac2mqtt:
         image: "REMOVED_USER/broadlinkac2mqtt_for_docker"

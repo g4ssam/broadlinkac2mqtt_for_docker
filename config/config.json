@@ -19,7 +19,7 @@
       "name": "AC in Kitchen",
       "port": 80,
       "temperature_unit": "C",
-      "Precision": 1.0
+      "precision": 1.0
     }
   ]
 }

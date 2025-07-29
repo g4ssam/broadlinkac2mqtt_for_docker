@@ -2,9 +2,10 @@ service:
   update_interval: 10 #Seconds
   log_level: error
 
+Broker: "tcp://192.168.1.107:1883"
+
 mqtt:
   ## Use mqtts for SSL support
-  broker: "tcp://192.168.1.107:1883"
   user: REMOVED_USER
   password: REMOVED_PASSWORD
   client_id: aircac2

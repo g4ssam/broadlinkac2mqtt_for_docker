@@ -51,26 +51,26 @@ func NewConfig(logger *slog.Logger) (*Config, error) {
 
 	files := [...]string{
 		"./config/config.yml",
-		"/app/config/config.yml",
 	}
 
-	for i := range files {
-		if _, err := os.Stat(files[i]); err == nil {
-			err := cleanenv.ReadConfig(files[i], cfg)
-			if err != nil {
-				logger.Error("failed to read config", slog.Any("err", err))
-				return nil, err
-			}
+    for i := range files {
+        if _, err := os.Stat(files[i]); err == nil {
 
-			err = cleanenv.ReadEnv(cfg)
-			if err != nil {
-				logger.Error("failed to read env", slog.Any("err", err))
-				return nil, err
-			}
+            err := cleanenv.ReadConfig(files[i], cfg)
+            if err != nil {
+                logger.Error("failed to read config", slog.Any("err", err))
+                return nil, err
+            }
 
-			return cfg, nil
-		}
-	}
+            err = cleanenv.ReadEnv(cfg)
+            if err != nil {
+                logger.Error("failed to read env", slog.Any("err", err))
+                return nil, err
+            }
+
+            return cfg, nil
+        }
+    }
 
 	return nil, errors.New("config file is not found")
 }

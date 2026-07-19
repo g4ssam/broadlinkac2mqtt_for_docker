@@ -53,24 +53,27 @@ func NewConfig(logger *slog.Logger) (*Config, error) {
 		"./config/config.yml",
 	}
 
-    for i := range files {
-        if _, err := os.Stat(files[i]); err == nil {
-
-            err := cleanenv.ReadConfig(files[i], cfg)
-            if err != nil {
-                logger.Error("failed to read config", slog.Any("err", err))
-                return nil, err
-            }
-
-            err = cleanenv.ReadEnv(cfg)
-            if err != nil {
-                logger.Error("failed to read env", slog.Any("err", err))
-                return nil, err
-            }
-
-            return cfg, nil
+        for i := range files {
+    if _, err := os.Stat(files[i]); err == nil {
+        err := cleanenv.ReadConfig(files[i], cfg)
+        if err != nil {
+            logger.Error("failed to read config", slog.Any("err", err))
+            return nil, err
         }
+
+        err = cleanenv.ReadEnv(cfg)
+        if err != nil {
+            logger.Error("failed to read env", slog.Any("err", err))
+            return nil, err
+        }
+
+        logger.Info("mqtt env loaded",
+            slog.Any("user", cfg.Mqtt.User),
+        )
+
+        return cfg, nil
     }
+}
 
 	return nil, errors.New("config file is not found")
 }

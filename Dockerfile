@@ -9,7 +9,7 @@ RUN adduser \
   --uid 65532 \
   small-user
 
-WORKDIR $GOPATH/src/broadlinkac2mqtt_for_docker/app/
+WORKDIR /go/src/broadlinkac2mqtt_for_docker/app
 
 COPY . .
 
@@ -20,15 +20,15 @@ ARG TARGETOS TARGETARCH
 RUN --mount=target=. \
     --mount=type=cache,target=/root/.cache/go-build \
     --mount=type=cache,target=/go/pkg \
-    GOOS=$TARGETOS GOARCH=$TARGETARCH go build -o /out/main .
+    GOOS=$TARGETOS GOARCH=$TARGETARCH \
+    go build -o /out/main .
 
 FROM scratch
 
-COPY --from=base /etc/passwd /etc/passwd
-COPY --from=base /etc/group /etc/group
-
-COPY --from=builder /out/main .
-COPY ./config/config.yml ./config/config.yml
+COPY --from=builder /etc/passwd /etc/passwd
+COPY --from=builder /etc/group /etc/group
+COPY --from=builder /out/main /main
+COPY config/config.yml /config/config.yml
 
 USER small-user:small-user
 

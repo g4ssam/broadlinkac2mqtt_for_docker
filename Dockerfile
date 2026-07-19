@@ -27,7 +27,7 @@ FROM scratch
 COPY --from=base /etc/passwd /etc/passwd
 COPY --from=base /etc/group /etc/group
 
-COPY --from=base /out/main .
+COPY --from=builder /out/main .
 COPY ./config/config.yml ./config/config.yml
 
 USER small-user:small-user

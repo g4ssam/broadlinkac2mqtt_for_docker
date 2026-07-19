@@ -53,8 +53,12 @@ func NewApp(logger *slog.Logger) (*App, error) {
 		AutoDiscoveryTopicRetain: cfg.Mqtt.AutoDiscoveryTopicRetain,
 	}
 
-	opts, _ := mqtt.NewMqttConfig(logger, cfg.Mqtt)
-	client := paho.NewClient(opts)
+    opts, err := mqtt.NewMqttConfig(logger, cfg.Mqtt)
+    if err != nil {
+        return nil, err
+    }
+
+    client := paho.NewClient(opts)
 
 	//Configure MQTT Sender Layer
 	mqttSender := workspaceMqttSender.NewMqttSender(

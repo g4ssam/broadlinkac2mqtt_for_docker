@@ -7,8 +7,8 @@ const (
 
 type ConfigMqtt struct {
 	Broker                   string
-	User                     *string
-	Password                 *string
+	User                     string
+	Password                 string
 	ClientId                 string
 	TopicPrefix              string
 	AutoDiscoveryTopic       *string

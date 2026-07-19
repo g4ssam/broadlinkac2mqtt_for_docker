@@ -24,12 +24,13 @@ func NewMqttConfig(logger *slog.Logger, cfg config.Mqtt) (*paho.ClientOptions, e
 
 	opts := paho.NewClientOptions().AddBroker(uri.String()).SetClientID(cfg.ClientId)
 
-	if cfg.User != nil {
-		opts.SetUsername(*cfg.User)
-	}
-	if cfg.Password != nil {
-		opts.SetPassword(*cfg.Password)
-	}
+    if cfg.User != "" {
+        opts.SetUsername(cfg.User)
+    }
+
+    if cfg.Password != "" {
+        opts.SetPassword(cfg.Password)
+    }
 
 	opts.SetKeepAlive(30 * time.Second)
 	opts.SetPingTimeout(10 * time.Second)

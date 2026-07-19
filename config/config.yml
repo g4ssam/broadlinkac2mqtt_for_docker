@@ -5,8 +5,8 @@ service:
 mqtt:
   ## Use mqtts for SSL support
   broker: tcp://192.168.1.107:1883
-  client_id: aircac2_test
-  topic_prefix: aircon2_test
+  client_id: aircac_kitchen
+  topic_prefix: aircon_kitchen
   auto_discovery_topic: homeassistant
   auto_discovery_topic_retain: false
   ## CA certificate in CRT format.
@@ -20,7 +20,7 @@ mqtt:
 devices:
   - ip: 192.168.1.63
     mac: 34ea34a6724e
-    name: AC in ASS
+    name: Кондиционер на кухне
     port: 80
     # Temperature Unit defines the temperature unit of the device, C or F.
     # If this is not set, the temperature unit is Celsius.

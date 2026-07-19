@@ -1,0 +1,5 @@
+Lozovaya95==>REMOVED_PASSWORD
+g4ssam==>REMOVED_USER
+"user": "g4ssam"==>"user": "REMOVED_USER"
+user: g4ssam==>user: REMOVED_USER
+MQTT_USER=g4ssam==>MQTT_USER=

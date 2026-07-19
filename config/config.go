@@ -21,9 +21,9 @@ type (
 	}
 
 	Mqtt struct {
-		Broker                   string  `env-required:"true" yaml:"broker" json:"broker"`
-		User                     *string `yaml:"user" json:"user"`
-		Password                 *string `yaml:"password" json:"password"`
+		Broker                   string  `env:"MQTT_BROKER" yaml:"broker" json:"broker"`
+		User                     *string `env:"MQTT_USER" yaml:"user" json:"user"`
+		Password                 *string `env:"MQTT_PASSWORD" yaml:"password" json:"password"`
 		ClientId                 string  `env-default:"broadlinkac" yaml:"client_id" json:"client_id"`
 		TopicPrefix              string  `env-default:"airac" yaml:"topic_prefix" json:"topic_prefix"`
 		AutoDiscoveryTopic       *string `yaml:"auto_discovery_topic" json:"auto_discovery_topic"`
@@ -51,8 +51,6 @@ func NewConfig(logger *slog.Logger) (*Config, error) {
 
 	files := [...]string{
 		"./config/config.yml",
-		"./config/config.json",
-		"/data/options.json", // hassio
 	}
 
 	for i := range files {
@@ -62,9 +60,13 @@ func NewConfig(logger *slog.Logger) (*Config, error) {
 				logger.Error("failed to read config", slog.Any("err", err))
 				return nil, err
 			}
+        err = cleanenv.ReadEnv(cfg)
+		if err != nil {
+			logger.Error("failed to read env", slog.Any("err", err))
+			return nil, err
 			return cfg, nil
 		}
 	}
-
+}
 	return nil, errors.New("config file is not found")
 }

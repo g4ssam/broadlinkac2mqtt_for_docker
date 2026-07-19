@@ -5,3 +5,5 @@
         restart: "on-failure"
         volumes:
             - /var/lib/docker/volumes/broadlink_config/_data:/app/config
+        env_file:
+          - .env

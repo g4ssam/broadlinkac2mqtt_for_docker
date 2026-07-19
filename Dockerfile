@@ -1,4 +1,4 @@
-FROM --platform=linux/arm64 golang:1.22-alpine AS base
+FROM golang:1.22-alpine AS builder
 
 RUN adduser \
   --disabled-password \
